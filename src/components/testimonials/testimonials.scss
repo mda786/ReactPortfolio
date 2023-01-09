@@ -1,0 +1,140 @@
+@import '../../global.scss';
+
+.testimonials{
+    background-color: $mainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 50px;
+        color: white;
+
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    .container{
+        width:100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile{
+            flex-direction: column;
+            height: 90%;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            width: 250px;
+            height: 70%;
+            box-shadow: 0px 0px 15px -8px black;
+            border-radius: 15px;
+            transition: all 1s ease;
+            background-color: white;
+            @include mobile{
+                
+                padding: 10px;
+                height: 180px;
+                width: 90%;
+                margin: 5px 0;
+                flex-direction: row;
+            }
+            &.featured{
+                width: 300px;
+                height: 75%;
+                margin: 0 30px;
+                @include mobile{
+                    width: 90%;
+                    height: 180px;
+                    margin: 1px;
+                }
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include mobile{
+                    flex-direction: column;
+                    flex: 1;
+                }
+                .top1{
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        .hover{
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+                .top2{
+                    margin: 5px 0;
+                    img{
+                        &.middle{
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            margin: 0 30px;
+                            @include mobile{
+                                width: 55px;
+                                height: 55px;
+                                margin: 0 15px;
+                            }
+                        }
+                    }
+                }
+
+                .top3{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    font-size: 20px;
+                    @include mobile{
+                        flex-direction: row;
+                    }
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        .hover{
+                            cursor: pointer;
+                            margin: 3px 0;
+                        }
+                    }
+                }
+            }
+            .center{
+                padding:10px;
+                border-radius: 10px;
+                background-color: rgb(250,244,245);
+                @include mobile{
+                    flex: 1;
+                }
+            }
+            .bottom{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                @include mobile{
+                    flex: 1;
+                }
+                h3{
+                    margin-bottom: 5px;
+                }
+                h4{
+                    color: gray;
+                }
+            }
+        }
+    }
+}
